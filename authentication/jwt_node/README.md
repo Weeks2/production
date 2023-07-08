@@ -1,8 +1,9 @@
 Packages 
 npm init
 
+npm install firebase-admin
 npm install --save-dev jest
-npm install express jsonwebtoken
+npm install express jsonwebtoken axios
 
 npx jest
 node app.js
