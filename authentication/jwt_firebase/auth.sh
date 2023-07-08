@@ -5,6 +5,9 @@ login_() {
 fetch() {
 curl -X GET -H "Authorization: Bearer $(cat token.txt)" "http://localhost:8083/api/todos"
 }
+fetch() {
+curl -X GET -H "Authorization: Bearer $(cat token.txt)" "https://jwt-firebase.onrender.com/api/todos"
+}
 
-login_
+#login_
 fetch

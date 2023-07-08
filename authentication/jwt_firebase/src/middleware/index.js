@@ -14,7 +14,7 @@ class Middleware {
             return res.json({message: "No access"});
         } 
         catch (error) {
-             return res.json({message: "Internal Error"});
+             return res.json({message: "Internal Error", error: error});
         }
     }
 }
