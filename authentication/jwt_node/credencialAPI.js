@@ -30,7 +30,7 @@ async function validarToken(idToken, apiKey) {
 async function getNewToken(email, password) {
   try {
     const response = await axios.post(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${apiKey}`, 
-    { email: email,password: password,returnSecureToken: true });
+    { email: email,password: password, returnSecureToken: true });
     return response.data.idToken;
   } catch (error) {
     console.error('Error al validar las credenciales:', error);
