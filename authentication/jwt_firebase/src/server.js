@@ -4,7 +4,8 @@ const cors = require('cors');
 const middleware = require('./middleware')
 const app = express();
 const port = 8083;
-const apiKey = "AIzaSyCNBJ7XjaLkMQgh16vpt5d2obbP8Z-Th54";
+require('dotenv').config();
+const apiKey = process.env.API_KEY;
 
 //app.use(middleware.decodeToken)
 app.use(express.json());
@@ -45,6 +46,6 @@ app.get('/api/todos',middleware.decodeToken,(req,res) => {
 
 
 app.listen(port, () => {
-    console.log(`Servidor iniciado en http://localhost:${port}`);
+    console.log(`Servidor iniciado en http://localhost:${port} ${apiKey}`);
   });
   
